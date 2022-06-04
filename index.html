@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo MVC</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body onload="onInit()">
+    <div class="page">
+      <h1>Todo MVC</h1>
+      <section class="todo-filter">
+        <h2>Todo Filter</h2>
+
+        <input
+          type="text"
+          name="filter-txt"
+          oninput="onSetFilterByTxt(this.value)"
+          placeholder="Start typing..."
+        />
+
+        <!-- <select onchange="onSetFilter(this.value)">
+        <option value="">All</option>
+        <option value="active">Active</option>
+        <option value="done">Done</option>
+      </select> -->
+        <div class="btns-filter" onclick="onSetFilter(event)">
+          <a data-filter="" class="selected">All</a>
+          <a data-filter="active">Active</a>
+          <a data-filter="done">Done</a>
+        </div>
+      </section>
+      <section class="todo-soter">
+        <select onchange="onSortTodos(this.value)">
+          <option value="created">By Date</option>
+          <option value="importance">By Importance</option>
+          <option value="txt">By Text</option>
+        </select>
+      </section>
+      <ul></ul>
+      <section class="stat">
+        Total todos: <span class="total-count">3</span> Active:
+        <span class="active-count">2</span>
+      </section>
+
+      <form onsubmit="onAddTodo(event)">
+        <input type="text" name="txt" placeholder="What do you need to do" />
+        <select name="importance">
+          <option value="1">Normal</option>
+          <option value="2">Important</option>
+          <option value="3">Very Important</option>
+        </select>
+        <button class="btn">Add</button>
+      </form>
+    </div>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/todo.service.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

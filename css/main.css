@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.6rem;
+  color: #e7f5ff;
+}
+
+.page {
+  width: 60rem;
+  margin: 9.6rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-color: #0b7285;
+  padding: 2.4rem;
+  border-radius: 12px;
+  min-height: 42rem;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+ul li button {
+  margin: 0 0.5rem;
+}
+.done {
+  text-decoration: line-through;
+}
+
+.todo-filter {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.todo-filter h2 {
+  font-size: 1.8rem;
+}
+
+.btns-filter {
+  border-bottom: 1px solid #e7f5ff;
+}
+.todo-filter a {
+  padding: 0.5rem;
+  display: inline-block;
+}
+.stat {
+  padding: 1em;
+  margin: 0.5em 0;
+}
+
+.selected {
+  border: 1px solid #e7f5ff;
+  border-bottom: none;
+}
+
+/* CSS */
+.btn {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  /* padding: 6px 16px; */
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.btn:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.btn:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.btn:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.btn:focus {
+  outline: 1px transparent;
+}
+
+.btn:before {
+  display: none;
+}
+
+.btn:-webkit-details-marker {
+  display: none;
+}
+
+select,
+input {
+  display: inline-block;
+  margin: 0.2rem;
+  background: white;
+  border: 1px solid #aaaaaa;
+  border-radius: 0.3em;
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-size: 0.85em;
+  overflow: hidden;
+  text-shadow: 0 1px 0 white;
+}
+
+select option {
+  text-shadow: none;
+}
